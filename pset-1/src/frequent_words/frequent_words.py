@@ -1,19 +1,33 @@
+"""Find the most frequent words of a given length in text."""
+
+from .pattern_count import PatternCount
+
 
 def FrequentWords(text: str, k: int) -> set[str]:
-    if k > len(text) or not text:
-        return set()
+    """Return all length-k substrings with the highest occurrence count.
 
-    substring_counts = {}
-    max_count = 0
+    Count overlapping, case-sensitive matches and include every tie once.
+    Assume k is a positive integer. Return an empty set if k exceeds the
+    length of text or text is empty.
 
-    for i in range(len(text) - k + 1):
-        substring = text[i:i + k]
-        count = PatternCount(text, substring)
-        substring_counts[substring] = count
-        if count > max_count:
-            max_count = count
+    Example:
+        FrequentWords("ATAT", 2) returns {"AT"}.
+        FrequentWords("ATGC", 2) returns {"AT", "TG", "GC"}.
 
-    most_frequent_substrings = {substring for substring, count in substring_counts.items() if count == max_count}
+    PatternCount is already imported above. You can call
+    PatternCount(text, pattern) directly in your implementation.
+    """
+    FrequentPatterns = set()
+    count = []
+    for i in range (len(text) - k +1):
+        pattern = text[i:i+k]
+        count.append (PatternCount(text,pattern))
 
+    max_count = max(count)
 
-    return most_frequent_substrings
+    for i in range (len(text) - k +1):
+        if count[i] == max_count:
+            FrequentPatterns.add(text[i:i+k])
+    return FrequentPatterns
+    # TODO: Implement this function.
+    raise NotImplementedError("Implement FrequentWords")
