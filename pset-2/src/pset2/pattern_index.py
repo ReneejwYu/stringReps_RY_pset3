@@ -1,3 +1,6 @@
 def patternIndex(text: str, pattern: str) -> list[int]:
-    # TODO: Write your code here.
-    raise NotImplementedError("Implement patternIndex")
+    indices = []
+    for i in range(len(text) - len(pattern) + 1):
+        if text[i:i + len(pattern)] == pattern:
+            indices.append(i)
+    return indices

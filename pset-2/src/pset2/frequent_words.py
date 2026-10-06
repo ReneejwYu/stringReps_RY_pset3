@@ -1,4 +1,4 @@
-#from frequent_words import FrequentWords as inclass_frequent_words
+from frequent_words import FrequentWords as inclass_frequent_words
 
 
 def frequentWords(text: str, k: int) -> set[str]:
@@ -16,6 +16,3 @@ def frequentWords(text: str, k: int) -> set[str]:
     for pattern in freqDic:
         if freqDic[pattern] == max_count:
             return pattern
-
-    raise NotImplementedError("Implement frequentWords")
-
