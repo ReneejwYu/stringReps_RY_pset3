@@ -9,7 +9,7 @@ def frequentWords(text: str, k: int) -> dict:
         if pattern not in freqDic:
             freqDic[pattern] = 1
         else:
-            freqDic[pattern] = +1
+            freqDic[pattern] += 1
     
     max_count = max(freqDic.values())
 
