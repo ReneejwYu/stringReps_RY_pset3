@@ -1,7 +1,7 @@
 from frequent_words import FrequentWords as inclass_frequent_words
 
 
-def frequentWords(text: str, k: int) -> set[str]:
+def frequentWords(text: str, k: int) -> dict:
     freqDic = {}
     for i in range(len(text)- k + 1):
         pattern = text[i:i+k]
