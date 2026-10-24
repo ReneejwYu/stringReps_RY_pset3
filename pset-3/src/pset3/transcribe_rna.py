@@ -7,8 +7,10 @@ def transcribeRNA(text: str) -> str:
 
     Replace each T with U, retaining the order of the other nucleotides.
     """
-
-    # use python regex library to find T's and substitute U's
-    rna = re.sub("T", "U", text.upper())
-
+    rna = ""
+    for base in text:
+        if base == "T":
+            rna += "U"
+        else:
+            rna += base
     return rna

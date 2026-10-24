@@ -6,22 +6,11 @@ def reverseComplement(text: str) -> str:
     A pairs with T, and C pairs with G. Return the complementary
     nucleotides in reverse order.
     """
-
-    # reverse string
-    reverse = text[::-1].upper()
-    # swap A --> T, C --> G, vice versa
+    complement = {"A": "T", "T": "A", "C": "G", "G": "C"}
     reverse_comp = ""
-    for i in range(len(text)):
-        if reverse[i] == "A":
-            reverse_comp = reverse_comp + "T"
-        elif reverse[i] == "T":
-            reverse_comp = reverse_comp + "A"
-        elif reverse[i] == "C":
-            reverse_comp = reverse_comp + "G"
-        elif reverse[i] == "G":
-            reverse_comp = reverse_comp + "C"
-        else:
-            raise Exception("Non-canonical base in DNA string")
 
+    for base in text[::-1]:
+        reverse_comp += complement[base]
 
     return reverse_comp
+
