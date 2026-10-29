@@ -42,7 +42,3 @@ def frequencyArray(text: str, k: int) -> list[int]:
     for pattern in patterns:
         frequency.append(PatternCount(text,pattern))
     return frequency
-
-
-    # TODO: Implement the frequency array.
-    #raise NotImplementedError("Implement frequencyArray for Rosalind BA1K.")

@@ -13,4 +13,3 @@ def reverseComplement(text: str) -> str:
         reverse_comp += complement[base]
 
     return reverse_comp
-

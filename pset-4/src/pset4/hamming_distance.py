@@ -1,3 +1,8 @@
 def hammingDistance(p: str, q: str) -> int:
-    # TODO: Write your code here.
-    raise NotImplementedError("Implement hammingDistance")
+    mismatch = 0
+
+    for i in range(len(p)):
+        if p[i] != q[i]:
+            mismatch += 1
+
+    return mismatch

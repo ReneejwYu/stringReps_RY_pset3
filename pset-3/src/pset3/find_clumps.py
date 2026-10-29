@@ -22,3 +22,5 @@ def findClumps(genome: str, k: int, L: int, t: int) -> set[str]:
                 clumps.add(pattern)
 
     return clumps
+
+print(" ".join(sorted(findClumps("CGGACTCGACAGATGTGAAGAAATGTGAAGACTGAGTGAAGAGAAGAGGAAACACGACACGACATTGCGACATAATGTACGAATGTAATGTGCCTATGGC", 5,  75, 4))))
