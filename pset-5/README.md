@@ -12,9 +12,11 @@ package exports as provided. See the linked Rosalind pages for each problem.
 | [BA3E: De Bruijn Graph from k-mers](https://rosalind.info/problems/ba3e/) | `deBruijnFromKmers(patterns)` | `src/pset5/de_bruijn_from_kmers.py` |
 
 Pass `patterns` as a list of strings (in path order for BA3B). Return a list
-of k-mers for BA3A, a string for BA3B, and an adjacency dictionary
-(`dict[str, list[str]]`) for BA3C–BA3E. Omit nodes with no outgoing edges;
-preserve repeated k-mers in BA3A and repeated edges in BA3D–BA3E.
+of k-mers for BA3A, a string for BA3B, and a two-column adjacency list
+(`list[list[str]]`) for BA3C–BA3E. Each row is one directed edge
+`[source, destination]`; for example, `[["TCT", "CTA"], ["TCT", "CTC"]]`.
+Rows may appear in any order. Preserve repeated k-mers in BA3A and repeated
+edge rows in BA3D–BA3E.
 Return values rather than printing them.
 
 ## Setup
