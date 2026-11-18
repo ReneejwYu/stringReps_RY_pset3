@@ -1,6 +1,6 @@
 """Rosalind BA1E: Find Patterns Forming Clumps in a String."""
 
-from frequency_array import PatternCount
+from .frequency_array import PatternCount
 
 def findClumps(genome: str, k: int, L: int, t: int) -> set[str]:
     """Return distinct k-mers appearing at least t times in any length-L window.
