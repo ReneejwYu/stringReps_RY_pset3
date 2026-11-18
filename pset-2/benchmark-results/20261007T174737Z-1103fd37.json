@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "20261007T174737Z-1103fd37",
+  "participant_id": "student-alias",
+  "created_utc": "2026-10-07T17:47:37.671727+00:00",
+  "python": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "python_implementation": "CPython",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "processor": "arm",
+  "timer": {
+    "implementation": "mach_absolute_time()",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 4.166666666666666e-08
+  },
+  "config": {
+    "sizes": [
+      100,
+      300,
+      1000,
+      3000,
+      10000
+    ],
+    "repeats": 3,
+    "k": 3,
+    "seed": 258,
+    "slow_seconds": 1.0,
+    "workloads": [
+      "random_dna",
+      "repeated_a"
+    ]
+  },
+  "source_sha256": {
+    "__init__.py": "c1bc2192bc381b90ef70694d184412f40452077725aa96fadfd93e279cb1ff32",
+    "count_nucleotides.py": "87aa12f51da16abfb7585cd403256cdddbdd701927195a361385a4462338dd32",
+    "frequent_words.py": "8e28de93c08a074eb891946f61ef59279a2804202821aa821786f48520c27879",
+    "pattern_count.py": "a00856b708da1eec5c8cbcc0e95b5fd0733c4ed817ab364857125ed21ef03c12",
+    "pattern_index.py": "198415f6be56f6a568d7227f7d908ce2261307c07b557d8ca429e9de2569b747",
+    "tempCodeRunnerFile.py": "aadc63ac2a18ec44728f9f87cfe207875955142ea67777b77b8c3929fc6a2155"
+  },
+  "complete": true,
+  "size_definition": "sys.getsizeof; deep size counts reachable built-in objects once by identity",
+  "successful_samples": 120,
+  "error_samples": 0
+}
