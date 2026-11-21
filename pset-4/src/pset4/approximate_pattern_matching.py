@@ -1,5 +1,5 @@
 
-from hamming_distance import hammingDistance
+from .hamming_distance import hammingDistance
 
 def approximatePatternMatching(pattern: str, text: str, d: int) -> list[int]:
     matched_position = []
