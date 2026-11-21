@@ -1,4 +1,4 @@
-from frequent_words_with_mismatches import Neighbors 
+from .frequent_words_with_mismatches import Neighbors 
 
 def reverseComplement(text: str) -> str:
     """Return the reverse complement of an uppercase DNA string.

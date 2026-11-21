@@ -16,3 +16,4 @@ def deBruijnFromString(k: int, text: str) -> list[list[str]]:
         result.append([prefix] + sorted(prefixes[prefix]))
 
     return result
+

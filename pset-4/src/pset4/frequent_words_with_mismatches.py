@@ -1,4 +1,4 @@
-from hamming_distance import hammingDistance
+from .hamming_distance import hammingDistance
 
 #creating the neighbors of each k-mers in the text(genome)
 def Neighbors(pattern: str, d: int) -> set[str]:
