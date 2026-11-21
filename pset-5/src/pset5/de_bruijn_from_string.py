@@ -1,8 +1,18 @@
 def deBruijnFromString(k: int, text: str) -> list[list[str]]:
-    """Return the de Bruijn graph of text as rows [source, destination] (BA3D).
+    prefixes = {}
 
-    Each row contains one directed edge, with the source first.
-    Row order does not matter. Preserve duplicate rows for parallel edges.
-    """
-    # TODO: Write your code here.
-    raise NotImplementedError("Implement deBruijnFromString")
+    for i in range(len(text) - k + 1):
+        pattern = text[i:i+k]
+        prefix = pattern[:-1]
+        suffix = pattern[1:]
+
+        if prefix not in prefixes:
+            prefixes[prefix] = []
+        prefixes[prefix].append(suffix)
+
+    result = []
+
+    for prefix in sorted(prefixes):
+        result.append([prefix] + sorted(prefixes[prefix]))
+
+    return result
